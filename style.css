@@ -33,7 +33,7 @@ body {
     background: var(--card);
     padding: 40px;
     border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     position: relative;
 }
 
@@ -79,8 +79,13 @@ h1 {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .back-link {
@@ -129,7 +134,7 @@ h2 {
 .feature-item:hover {
     transform: translateY(-5px);
     border-color: var(--accent);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
 .feature-item strong {
@@ -143,6 +148,82 @@ h2 {
     font-size: 0.95rem;
     margin: 0;
     color: var(--text-light);
+}
+
+.feature-item a {
+    color: var(--accent);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.feature-item a:hover {
+    text-decoration: none;
+}
+
+/* --- Sezione marketing (Perché sceglierla) --- */
+.why-section {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 1.05rem;
+    color: var(--text-light);
+}
+
+.why-section p {
+    max-width: 42rem;
+    margin: 0 auto;
+    line-height: 1.65;
+}
+
+.availability-section {
+    margin-top: 40px;
+    text-align: center;
+    color: var(--text-light);
+}
+
+.availability-section p {
+    max-width: 40rem;
+    margin: 0.5rem auto 0;
+    line-height: 1.65;
+    font-size: 1.05rem;
+}
+
+/* --- Documenti legali (privacy, termini) --- */
+.legal-doc {
+    text-align: left;
+}
+
+.legal-doc h2 {
+    margin-top: 0;
+}
+
+.legal-doc h3 {
+    margin-top: 1.75rem;
+    margin-bottom: 0.65rem;
+    color: var(--primary);
+    font-size: 1.15rem;
+    font-weight: 700;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.legal-doc p,
+.legal-doc ul {
+    color: var(--text);
+    font-size: 0.98rem;
+    line-height: 1.65;
+}
+
+.legal-doc ul {
+    padding-left: 1.35rem;
+    margin: 0.5rem 0 1rem;
+}
+
+.legal-doc li {
+    margin-bottom: 0.55rem;
+}
+
+.legal-doc li:last-child {
+    margin-bottom: 0;
 }
 
 /* Disclaimer e Note */
