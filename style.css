@@ -3,12 +3,19 @@
     --accent: #0066cc;
     --bg: #f9f9f9;
     --card: #fff;
+    --border: #eee;
+    --text: #444;
+}
+
+/* Reset base */
+* {
+    box-shadow: border-box;
 }
 
 body {
-    font-family: -apple-system, system-ui, sans-serif;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.6;
-    color: #444;
+    color: var(--text);
     background-color: var(--bg);
     margin: 0;
     padding: 0;
@@ -19,15 +26,176 @@ body {
     margin: 40px auto;
     background: var(--card);
     padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
 }
 
-header, footer { text-align: center; margin-bottom: 30px; }
-h1 { color: var(--primary); border-bottom: 2px solid #eee; padding-bottom: 10px; }
-h2 { color: var(--primary); margin-top: 25px; }
-.update-date { font-style: italic; color: #777; }
-.back-link { text-decoration: none; color: var(--accent); font-weight: bold; }
-footer { margin-top: 50px; font-size: 0.9rem; border-top: 1px solid #eee; padding-top: 20px; }
-a { color: var(--accent); text-decoration: none; }
-a:hover { text-decoration: underline; }
+/* Header, Logo e Banner */
+.main-header {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.app-logo {
+    max-width: 120px; /* Regola la dimensione del logo */
+    height: auto;
+    border-radius: 20%; /* Leggermente arrotondato */
+    margin-bottom: 15px;
+}
+
+h1 {
+    color: var(--primary);
+    margin: 10px 0 5px 0;
+    font-size: 2.5rem;
+}
+
+.main-header p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-top: 0;
+}
+
+.banner-container {
+    margin: 0 -40px 40px -40px; /* Estende il banner ai bordi della card */
+    overflow: hidden;
+}
+
+.app-banner {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-top-left-radius: 12px; /* Mantiene gli angoli arrotondati della card */
+    border-top-right-radius: 12px;
+}
+
+/* Contenuto Principale */
+h2 {
+    color: var(--primary);
+    margin-top: 30px;
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 10px;
+}
+
+.features ul {
+    padding-left: 20px;
+}
+
+.features li {
+    margin-bottom: 10px;
+}
+
+/* Galleria Screenshot */
+.screenshots {
+    margin-top: 40px;
+}
+
+.screenshot-gallery {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto; /* Permette lo scorrimento orizzontale su mobile */
+    padding: 15px 0;
+    -webkit-overflow-scrolling: touch; /* Scorrimento fluido su iOS */
+}
+
+.screenshot-placeholder {
+    min-width: 220px;
+    height: 440px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #ccc;
+    color: #999;
+    font-size: 0.9rem;
+}
+
+.screenshot-caption {
+    font-size: 0.85rem;
+    color: #777;
+    font-style: italic;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Sezione Contatti */
+.contact-section {
+    background-color: #f0f7ff;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 40px 0;
+    border-left: 5px solid var(--accent);
+}
+
+.contact-section h2 {
+    border-bottom: none;
+    margin-top: 0;
+    color: var(--accent);
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.contact-list li {
+    margin-bottom: 8px;
+}
+
+/* Footer e Link */
+footer {
+    margin-top: 50px;
+    padding-top: 25px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+footer nav a {
+    margin: 0 10px;
+}
+
+.footer-copy {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 15px;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #004499;
+    text-decoration: underline;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Responsive (Mobile) */
+@media (max-width: 600px) {
+    .container {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .banner-container {
+        margin: 0 -20px 20px -20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .screenshot-placeholder {
+        min-width: 180px;
+        height: 360px;
+    }
+}
