@@ -15,7 +15,7 @@
 
     <header class="main-header">
         <h1>IVU Plus</h1>
-        <p>L'integrazione perfetta per i tuoi turni di lavoro. [cite: 2]</p>
+        <p>L'integrazione perfetta per i tuoi turni di lavoro.</p>
     </header>
 
     <main>
@@ -23,10 +23,10 @@
             <div class="features">
                 <h2>Funzionalità principali</h2>
                 <ul>
-                    <li><strong>Accesso WebCrew:</strong> Browser integrato (WebView) per consultare il portale dei turni Trenitalia. [cite: 3]</li>
-                    <li><strong>Sincronizzazione Calendar:</strong> Esporta i tuoi turni direttamente su Google Calendar. [cite: 1]</li>
-                    <li><strong>Sicurezza Locale:</strong> Le password sono protette da crittografia e memorizzate solo sul tuo dispositivo. [cite: 4]</li>
-                    <li><strong>Indipendenza:</strong> Strumento tecnico indipendente, non affiliato a Trenitalia S.p.A. [cite: 3]</li>
+                    <li><strong>Accesso WebCrew:</strong> Browser integrato (WebView) per consultare il portale dei turni Trenitalia.</li>
+                    <li><strong>Sincronizzazione Calendar:</strong> Esporta i tuoi turni direttamente su Google Calendar.</li>
+                    <li><strong>Sicurezza Locale:</strong> Le password sono protette da crittografia e memorizzate solo sul tuo dispositivo.</li>
+                    <li><strong>Indipendenza:</strong> Strumento tecnico indipendente, non affiliato a Trenitalia S.p.A.</li>
                 </ul>
             </div>
 
@@ -41,36 +41,37 @@
 
             <section class="contact-section">
                 <h2>Supporto e Contatti</h2>
-                <p>Per assistenza tecnica o segnalazioni: [cite: 18]</p>
+                <p>Per assistenza tecnica o segnalazioni:</p>
                 <ul class="contact-list">
-                    <li><strong>Leo Granata:</strong> Via Fornari 34, 76123 Andria (BT), Italia [cite: 1]</li>
-                    <li><strong>Email:</strong> <a href="mailto:leogranata@gmail.com">leogranata@gmail.com</a> [cite: 1]</li>
+                    <li><strong>Sviluppatore:</strong> Leo Granata</li>
+                    <li><strong>Email:</strong> <a href="mailto:leogranata@gmail.com">leogranata@gmail.com</a></li>
+                    <li><strong>Indirizzo:</strong> Via Fornari 34, 76123 Andria (BT), Italia</li>
                 </ul>
             </section>
         </section>
 
         <section id="privacy" class="page-section">
-            <a href="#home" class="back-link" onclick="showSection('home')">← Torna alla Home</a>
+            <a href="#home" class="back-link" onclick="return showSection('home')">← Torna alla Home</a>
             <h2>Informativa sulla privacy</h2>
-            <p class="update-date">Ultimo aggiornamento: 21 marzo 2026 [cite: 1]</p>
+            <p class="update-date">Ultimo aggiornamento: 21 marzo 2026</p>
             <h3>Titolare del trattamento</h3>
-            <p>Leo Granata, Via Fornari 34, 76123 Andria (BT). [cite: 1] Email: leogranata@gmail.com. [cite: 1]</p>
+            <p>Leo Granata, Via Fornari 34, 76123 Andria (BT). Email: leogranata@gmail.com.</p>
             <h3>Dati trattati</h3>
             <ul>
-                <li>Credenziali e identificativi per l’accesso al portale. [cite: 4]</li>
-                <li>Dati relativi ai turni e alle informazioni visualizzate. [cite: 5]</li>
-                <li>Token di autenticazione Google (solo se attivi la sincronizzazione). [cite: 7]</li>
+                <li>Credenziali e identificativi per l’accesso al portale.</li>
+                <li>Dati relativi ai turni e alle informazioni visualizzate.</li>
+                <li>Token di autenticazione Google (solo se attivi la sincronizzazione).</li>
             </ul>
         </section>
 
         <section id="termini" class="page-section">
-            <a href="#home" class="back-link" onclick="showSection('home')">← Torna alla Home</a>
+            <a href="#home" class="back-link" onclick="return showSection('home')">← Torna alla Home</a>
             <h2>Termini di Servizio</h2>
-            <p class="update-date">Ultimo aggiornamento: 21 marzo 2026 [cite: 1]</p>
+            <p class="update-date">Ultimo aggiornamento: 21 marzo 2026</p>
             <h3>Accettazione</h3>
-            <p>Utilizzando l’App, dichiari di aver letto e accettato i presenti Termini. [cite: 2]</p>
+            <p>Utilizzando l’App, dichiari di aver accettato i presenti Termini.</p>
             <h3>Limitazione di responsabilità</h3>
-            <p>Il Titolare non garantisce l'assenza di errori nella sincronizzazione. [cite: 10] L'App non è un prodotto ufficiale di Trenitalia S.p.A. [cite: 3]</p>
+            <p>Il Titolare non garantisce l'assenza di errori nella sincronizzazione. L'App non è un prodotto ufficiale di Trenitalia S.p.A.</p>
         </section>
     </main>
 
@@ -79,9 +80,9 @@
             <img src="IVUPlus-Logo.png" alt="IVU Plus Logo" class="footer-logo">
         </div>
         <nav>
-            <a href="#home" onclick="showSection('home')">Home</a> | 
-            <a href="#privacy" onclick="showSection('privacy')">Privacy Policy</a> | 
-            <a href="#termini" onclick="showSection('termini')">Termini di Servizio</a>
+            <a href="#home" onclick="return showSection('home')">Home</a> | 
+            <a href="#privacy" onclick="return showSection('privacy')">Privacy</a> | 
+            <a href="#termini" onclick="return showSection('termini')">Termini</a>
         </nav>
         <p class="footer-copy">&copy; 2026 Leo Granata</p>
     </footer>
@@ -89,14 +90,11 @@
 
 <script>
     function showSection(sectionId) {
-        document.querySelectorAll('.page-section').forEach(section => {
-            section.classList.remove('active');
-        });
+        document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active'));
         document.getElementById(sectionId).classList.add('active');
         window.scrollTo(0, 0);
         return false;
     }
 </script>
-
 </body>
 </html>
