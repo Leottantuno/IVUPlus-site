@@ -10,65 +10,96 @@
 
 <div class="container">
     <header class="main-header">
-        <img src="IVUPlus-Logo.png" alt="IVU Plus Logo" class="app-logo">
-        <h1>IVU Plus</h1>
-        <p>L'integrazione perfetta per i tuoi turni di lavoro.</p>
+        <img src="IVUPlus-Logo.jpg" alt="IVU Plus Logo" class="app-logo">
+        <h1 id="page-title">IVU Plus</h1>
+        <p id="page-subtitle">L'integrazione perfetta per i tuoi turni di lavoro.</p>
     </header>
 
     <div class="banner-container">
-        <img src="IVUPlus-Banner.png" alt="IVU Plus Banner" class="app-banner">
+        <img src="IVUPlus-Banner.jpg" alt="IVU Plus Banner" class="app-banner">
     </div>
 
     <main>
-        <section class="features">
-            <h2>Funzionalità principali</h2>
-            <ul>
-                <li><strong>Accesso WebCrew:</strong> Browser integrato (WebView) per consultare rapidamente il portale dei turni.</li>
-                <li><strong>Sincronizzazione Calendar:</strong> Esporta i tuoi turni su Google Calendar in pochi istanti.</li>
-                <li><strong>Sicurezza:</strong> Credenziali protette da crittografia e memorizzate esclusivamente sul dispositivo.</li>
-                <li><strong>Indipendenza:</strong> Uno strumento tecnico sviluppato per facilitare la gestione quotidiana, non affiliato a Trenitalia.</li>
-            </ul>
-        </section>
-
-        <section class="screenshots">
-            <h2>Uno sguardo all'interfaccia</h2>
-            <div class="screenshot-gallery">
-                <div class="screenshot-placeholder">
-                    <span>Screenshot 1</span>
-                </div>
-                <div class="screenshot-placeholder">
-                    <span>Screenshot 2</span>
-                </div>
-                <div class="screenshot-placeholder">
-                    <span>Screenshot 3</span>
-                </div>
+        <section id="home" class="page-section active">
+            <div class="features">
+                <h2>Funzionalità principali</h2>
+                <ul>
+                    <li><strong>Accesso WebCrew:</strong> Browser integrato (WebView) per consultare il portale dei turni[cite: 1, 4].</li>
+                    <li><strong>Sincronizzazione Calendar:</strong> Esporta i turni su Google Calendar[cite: 1, 9].</li>
+                    <li><strong>Sicurezza:</strong> Credenziali protette da crittografia locale sul dispositivo[cite: 4, 11].</li>
+                    <li><strong>Indipendenza:</strong> Strumento non ufficiale, non affiliato a Trenitalia[cite: 3].</li>
+                </ul>
             </div>
-            <p class="screenshot-caption">
-                Esempi di visualizzazione dei turni e della sincronizzazione Google Calendar.
-            </p>
+
+            <section class="screenshots">
+                <h2>Interfaccia</h2>
+                <div class="screenshot-gallery">
+                    <div class="screenshot-placeholder"><span>Screenshot 1</span></div>
+                    <div class="screenshot-placeholder"><span>Screenshot 2</span></div>
+                    <div class="screenshot-placeholder"><span>Screenshot 3</span></div>
+                </div>
+            </section>
+
+            <section class="contact-section">
+                <h2>Supporto</h2>
+                <p>Per assistenza o esercizio dei diritti[cite: 18, 22]:</p>
+                <ul class="contact-list">
+                    <li><strong>Leo Granata:</strong> Via Fornari 34, Andria (BT) [cite: 1]</li>
+                    <li><strong>Email:</strong> <a href="mailto:leogranata@gmail.com">leogranata@gmail.com</a> [cite: 1]</li>
+                </ul>
+            </section>
         </section>
 
-        <section class="contact-section">
-            <h2>Supporto e Contatti</h2>
-            <p>Per assistenza tecnica, segnalazioni di bug o richieste relative all'esercizio dei tuoi diritti sulla privacy, puoi contattarmi direttamente:</p>
-            <ul class="contact-list">
-                <li><strong>Sviluppatore:</strong> Leo Granata</li>
-                <li><strong>Email:</strong> <a href="mailto:leogranata@gmail.com">leogranata@gmail.com</a></li>
-                <li><strong>Indirizzo:</strong> Via Fornari 34, 76123 Andria (BT), Italia</li>
+        <section id="privacy" class="page-section">
+            <a href="#home" class="back-link" onclick="showSection('home')">← Torna alla Home</a>
+            <h2>Informativa sulla privacy</h2>
+            <p class="update-date">Ultimo aggiornamento: 21 marzo 2026 [cite: 1]</p>
+            <p>IVU Plus consente l'accesso al portale turni e la sincronizzazione con Google Calendar[cite: 1].</p>
+            <h3>Titolare del trattamento</h3>
+            <p>Leo Granata, Via Fornari 34, 76123 Andria (BT). Email: leogranata@gmail.com[cite: 1].</p>
+            <h3>Dati trattati</h3>
+            <ul>
+                <li>Credenziali d'accesso (protette localmente)[cite: 4].</li>
+                <li>Dati relativi ai turni estratti[cite: 5].</li>
+                <li>Token di autenticazione Google (se attivi la sincronizzazione)[cite: 7].</li>
             </ul>
+            <p>I dati sono conservati prevalentemente sul dispositivo dell’utente[cite: 11]. Il Titolare non vende i dati personali[cite: 15].</p>
+        </section>
+
+        <section id="termini" class="page-section">
+            <a href="#home" class="back-link" onclick="showSection('home')">← Torna alla Home</a>
+            <h2>Termini di Servizio</h2>
+            <p class="update-date">Ultimo aggiornamento: 21 marzo 2026</p>
+            <p>Utilizzando l’App, l’utente accetta i presenti Termini.</p>
+            <h3>Natura del servizio</h3>
+            <p>IVU Plus è uno strumento tecnico indipendente e <strong>non ufficiale</strong> di Trenitalia S.p.A.[cite: 3].</p>
+            <h3>Responsabilità</h3>
+            <p>L'utente è responsabile della segretezza delle credenziali[cite: 4]. Il Titolare non garantisce l'assenza di errori nella sincronizzazione dei dati.</p>
         </section>
     </main>
 
     <footer>
         <nav>
-            <a href="privacy.html">Privacy Policy</a> | 
-            <a href="termini.html">Termini di Servizio</a>
+            <a href="#home" onclick="showSection('home')">Home</a> | 
+            <a href="#privacy" onclick="showSection('privacy')">Privacy</a> | 
+            <a href="#termini" onclick="showSection('termini')">Termini</a>
         </nav>
-        <p class="footer-copy">
-            &copy; 2026 Leo Granata - Ultimo aggiornamento sito: 21 marzo 2026
-        </p>
+        <p class="footer-copy">&copy; 2026 Leo Granata</p>
     </footer>
 </div>
+
+<script>
+    function showSection(sectionId) {
+        // Nascondi tutte le sezioni
+        document.querySelectorAll('.page-section').forEach(section => {
+            section.classList.remove('active');
+        });
+        // Mostra la sezione selezionata
+        document.getElementById(sectionId).classList.add('active');
+        // Scorri in alto
+        window.scrollTo(0, 0);
+    }
+</script>
 
 </body>
 </html>

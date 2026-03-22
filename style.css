@@ -199,3 +199,23 @@ a:hover {
         height: 360px;
     }
 }
+/* Gestione sezioni Single Page */
+.page-section {
+    display: none; /* Nasconde le sezioni di default */
+}
+
+.page-section.active {
+    display: block; /* Mostra solo la sezione attiva */
+    animation: fadeIn 0.3s ease-in; /* Effetto comparsa fluida */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Miglioramento link footer */
+footer nav a {
+    cursor: pointer;
+    font-weight: bold;
+}
