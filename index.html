@@ -130,7 +130,7 @@
             <section id="privacy" class="page-section legal-doc">
                 <a href="#home" class="back-link" onclick="return showSection('home')">← Torna alla Home</a>
                 <h2>Informativa sulla privacy – IVU Plus</h2>
-                <p class="update-date">Ultimo aggiornamento: 22 luglio 2026</p>
+                <p class="update-date">Ultimo aggiornamento: 25 luglio 2026</p>
 
                 <h3>1. Titolare del trattamento</h3>
                 <p>Il titolare del trattamento dei dati personali relativi all’uso dell’applicazione IVU Plus è:</p>
@@ -220,6 +220,8 @@
                         href="mailto:leogranata@gmail.com">leogranata@gmail.com</a>.</p>
                 <p>Per i trattamenti effettuati da Google, Sentry o dal gestore del portale WebCrew Trenitalia, si
                     applicano rispettivamente i loro canali e informative.</p>
+                <p>Come eliminare i dati locali e cosa non è cancellabile da IVU Plus: vedi la pagina
+                    <a href="#account-deletion" onclick="return showSection('account-deletion')">Cancellazione account e dati</a>.</p>
 
                 <h3>10. Sicurezza</h3>
                 <p>Il Titolare adotta misure tecniche e organizzative appropriate compatibili con la natura dell’app,
@@ -233,6 +235,51 @@
                 <h3>12. Contatti</h3>
                 <p>Privacy, diritti degli interessati e supporto: <a
                         href="mailto:leogranata@gmail.com">leogranata@gmail.com</a></p>
+            </section>
+
+            <section id="account-deletion" class="page-section legal-doc">
+                <a href="#home" class="back-link" onclick="return showSection('home')">← Torna alla Home</a>
+                <h2>Cancellazione account e dati – IVU Plus</h2>
+                <p class="update-date">Ultimo aggiornamento: 25 luglio 2026</p>
+
+                <p>Questa pagina spiega come eliminare i dati gestiti da IVU Plus, come richiesto dalle policy degli
+                    store (account deletion / data deletion).</p>
+
+                <h3>1. Nessun account cloud IVU Plus</h3>
+                <p>IVU Plus <strong>non</strong> crea un account sui server dello sviluppatore. I profili utente,
+                    le credenziali (protette sul dispositivo), i turni e le note restano <strong>locali</strong> sul
+                    telefono o sul tablet, salvo le sincronizzazioni che attivi tu (portale WebCrew, calendario
+                    dispositivo, segnalazione errori opt-in verso Sentry).</p>
+
+                <h3>2. Come eliminare i dati dall’app</h3>
+                <ol>
+                    <li>Apri IVU Plus → <strong>Impostazioni</strong> → <strong>Utenti</strong>.</li>
+                    <li>Seleziona il profilo da rimuovere.</li>
+                    <li>Usa <strong>Elimina utente</strong> (e, se disponibile, le opzioni per cancellare solo i dati
+                        turni) e conferma.</li>
+                </ol>
+                <p>In questo modo vengono rimossi dal dispositivo il profilo locale, le credenziali salvate per quel
+                    profilo e i turni/note associati, nei limiti delle funzioni offerte dall’app.</p>
+                <p>In alternativa puoi disinstallare l’app: i dati locali di IVU Plus vengono rimossi con
+                    l’applicazione (salvo backup che hai esportato tu in un file <code>.ivuplusdb</code> o eventi già
+                    scritti nel calendario di sistema).</p>
+
+                <h3>3. Cosa IVU Plus non può cancellare</h3>
+                <ul>
+                    <li><strong>Account WebCrew / Trenitalia</strong>: è gestito dal datore di lavoro e dal portale
+                        aziendale. Per chiudere o modificare quell’account usa i canali del gestore del portale.</li>
+                    <li><strong>Eventi già creati sul calendario del telefono</strong>: dopo la sync restano sul
+                        calendario scelto; puoi eliminarli dalle app Calendario del sistema o disattivando/ripulendo
+                        il mirror dalle Impostazioni IVU Plus dove previsto.</li>
+                    <li><strong>Report di errore già inviati a Sentry</strong> (solo se avevi attivato
+                        «Segnalazione errori»): puoi disattivare l’opt-in in qualsiasi momento; per richieste su dati
+                        già trasmessi contatta <a href="mailto:leogranata@gmail.com">leogranata@gmail.com</a>.</li>
+                </ul>
+
+                <h3>4. Contatti</h3>
+                <p>Per richieste di cancellazione o chiarimenti sui dati trattati tramite IVU Plus:
+                    <a href="mailto:leogranata@gmail.com">leogranata@gmail.com</a>.</p>
+                <p>Informativa completa: <a href="#privacy" onclick="return showSection('privacy')">Privacy</a>.</p>
             </section>
 
             <section id="termini" class="page-section legal-doc">
@@ -346,6 +393,7 @@
             <nav>
                 <a href="#home" onclick="return showSection('home')">Home</a> |
                 <a href="#privacy" onclick="return showSection('privacy')">Privacy</a> |
+                <a href="#account-deletion" onclick="return showSection('account-deletion')">Cancellazione dati</a> |
                 <a href="#termini" onclick="return showSection('termini')">Termini</a>
             </nav>
             <p class="footer-copy">&copy; 2026 Leo Granata</p>
@@ -370,7 +418,7 @@
             const raw = window.location.hash;
             if (!raw || raw === '#') return;
             const id = raw.slice(1);
-            if (id === 'privacy' || id === 'termini' || id === 'home') {
+            if (id === 'privacy' || id === 'termini' || id === 'home' || id === 'account-deletion') {
                 showSection(id);
             }
         })();
