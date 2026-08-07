@@ -130,7 +130,7 @@
             <section id="privacy" class="page-section legal-doc">
                 <a href="#home" class="back-link" onclick="return showSection('home')">← Torna alla Home</a>
                 <h2>Informativa sulla privacy – IVU Plus</h2>
-                <p class="update-date">Ultimo aggiornamento: 25 luglio 2026</p>
+                <p class="update-date">Ultimo aggiornamento: 7 agosto 2026</p>
 
                 <h3>1. Titolare del trattamento</h3>
                 <p>Il titolare del trattamento dei dati personali relativi all’uso dell’applicazione IVU Plus è:</p>
@@ -141,8 +141,7 @@
 
                 <h3>2. Oggetto</h3>
                 <p>IVU Plus è un’applicazione che consente di accedere al portale dei turni tramite browser integrato
-                    (WebView) e, se l’utente lo sceglie, di sincronizzare i turni con Google Calendar tramite gli
-                    strumenti offerti da Google.</p>
+                    (WebView) e, se l’utente lo sceglie, di copiare i turni sul calendario di sistema del dispositivo.</p>
                 <p>La presente informativa descrive come il Titolare tratta i dati nell’ambito dell’app. L’accesso ai
                     siti e ai servizi del portale WebCrew Trenitalia avviene su infrastrutture del relativo gestore:
                     per quella parte possono applicarsi informative e condizioni del gestore del portale, che non sono
@@ -154,14 +153,16 @@
                     <li>Credenziali e identificativi per l’accesso al portale (ad esempio nome utente; la password viene
                         trattata in modo da ridurre il rischio di uso improprio sul dispositivo, inclusa protezione
                         crittografica prima della memorizzazione locale).</li>
+                    <li>ID univoco e personnel-number associati al profilo nell’app.</li>
                     <li>Dati relativi ai turni e alle informazioni visualizzate, estratte o memorizzate tramite l’app per
                         fornirti le funzionalità richieste.</li>
-                    <li>Preferenze e impostazioni dell’applicazione (ad esempio opzioni di sincronizzazione).</li>
-                    <li>Dati connessi all’account Google (inclusi token di autenticazione), solo se attivi l’accesso
-                        Google e/o la sincronizzazione con Google Calendar.</li>
+                    <li>Preferenze e impostazioni dell’applicazione (ad esempio opzioni di sincronizzazione e calendari
+                        di sistema selezionati).</li>
                     <li>Se attivi «Segnalazione errori» nelle Impostazioni: dati tecnici di diagnostica (tipo di errore,
                         stack trace, versione app, modello dispositivo). Non includono password, token, credenziali né
                         il contenuto dei turni.</li>
+                    <li>Se attivi IVU Plus Pro: identificativi e stato abbonamento gestiti dallo store e da RevenueCat
+                        (non include password del portale WebCrew).</li>
                 </ul>
 
                 <h3>4. Finalità e base giuridica</h3>
@@ -169,12 +170,13 @@
                 <ul>
                     <li>consentirti l’uso dell’app e l’accesso alle funzioni richieste (esecuzione di misure
                         precontrattuali / contrattuali su richiesta dell’interessato, ove applicabile);</li>
-                    <li>gestire la sincronizzazione con Google Calendar quando la attivi (consenso e/o esecuzione delle
+                    <li>copiare i turni sul calendario del dispositivo quando lo attivi (consenso e/o esecuzione delle
                         tue istruzioni, a seconda del contesto e della configurazione);</li>
                     <li>garantire sicurezza e corretto funzionamento dell’app (misure tecniche, prevenzione abusi,
                         legittimo interesse ove compatibile con i tuoi diritti);</li>
                     <li>migliorare stabilità e qualità dell’app tramite segnalazione errori, solo con il tuo consenso
-                        esplicito (opt-in).</li>
+                        esplicito (opt-in);</li>
+                    <li>gestire l’abbonamento Pro tramite Apple App Store o Google Play e RevenueCat.</li>
                 </ul>
 
                 <h3>5. Modalità del trattamento e luogo</h3>
@@ -186,9 +188,10 @@
 
                 <h3>6. Destinatari e responsabili</h3>
                 <ul>
-                    <li>Google LLC (e società del gruppo Google), per Google Sign-In e Google Calendar API, solo se
-                        abilitati dall’utente. Informativa: <a href="https://policies.google.com/privacy" target="_blank"
-                            rel="noopener noreferrer">https://policies.google.com/privacy</a></li>
+                    <li>Provider del calendario di sistema del dispositivo (API del sistema operativo), solo se concedi
+                        i permessi e configuri i calendari in app. Se il calendario del dispositivo è sincronizzato dal
+                        sistema operativo verso servizi cloud (ad esempio Google o iCloud), si applicano le informative
+                        di quei fornitori.</li>
                     <li>Gestore del portale cui si accede tramite l’app (WebCrew Trenitalia), per i dati inseriti,
                         trasmessi o consultati sui suoi sistemi.</li>
                     <li>Functional Software, Inc. (Sentry), solo se attivi «Segnalazione errori» nelle Impostazioni:
@@ -196,13 +199,15 @@
                         momento; senza opt-in non viene inviato nulla. Informativa: <a
                             href="https://sentry.io/privacy/" target="_blank"
                             rel="noopener noreferrer">https://sentry.io/privacy/</a></li>
+                    <li>Apple, Google e RevenueCat, solo in relazione ad acquisti e stato dell’abbonamento IVU Plus Pro.</li>
                 </ul>
                 <p>Il Titolare non vende i dati personali.</p>
 
                 <h3>7. Trasferimenti verso paesi extra-UE</h3>
-                <p>L’uso dei servizi Google e, se opt-in, di Sentry può comportare trattamenti e trasferimenti verso
-                    paesi extra-UE secondo le garanzie descritte nella documentazione e nelle informative dei rispettivi
-                    fornitori.</p>
+                <p>L’uso di Sentry (se opt-in) e dei servizi di store/RevenueCat può comportare trattamenti e trasferimenti
+                    verso paesi extra-UE secondo le garanzie descritte nella documentazione e nelle informative dei
+                    rispettivi fornitori. Lo stesso può valere per i servizi cloud a cui il sistema operativo sincronizza
+                    il calendario del dispositivo.</p>
 
                 <h3>8. Conservazione</h3>
                 <p>I dati sono conservati per il tempo necessario a fornire le funzioni dell’app e secondo le scelte
@@ -218,15 +223,15 @@
                         rel="noopener noreferrer">https://www.garanteprivacy.it</a>).</p>
                 <p>Per richieste relative al trattamento effettuato tramite IVU Plus: <a
                         href="mailto:leogranata@gmail.com">leogranata@gmail.com</a>.</p>
-                <p>Per i trattamenti effettuati da Google, Sentry o dal gestore del portale WebCrew Trenitalia, si
-                    applicano rispettivamente i loro canali e informative.</p>
+                <p>Per i trattamenti effettuati da Sentry, dagli store, da RevenueCat o dal gestore del portale WebCrew
+                    Trenitalia, si applicano rispettivamente i loro canali e informative.</p>
                 <p>Come eliminare i dati locali e cosa non è cancellabile da IVU Plus: vedi la pagina
                     <a href="#account-deletion" onclick="return showSection('account-deletion')">Cancellazione account e dati</a>.</p>
 
                 <h3>10. Sicurezza</h3>
                 <p>Il Titolare adotta misure tecniche e organizzative appropriate compatibili con la natura dell’app,
-                    inclusa la riduzione del rischio di accessi non autorizzati ai dati sul dispositivo, nel rispetto
-                    dello stato dell’arte e delle funzionalità offerte dalla piattaforma.</p>
+                    inclusa la protezione crittografica delle password e l’uso di archiviazione sicura del sistema
+                    operativo, nel rispetto dello stato dell’arte e delle funzionalità offerte dalla piattaforma.</p>
 
                 <h3>11. Modifiche</h3>
                 <p>Il Titolare può aggiornare la presente informativa. La versione aggiornata sarà pubblicata su questa
@@ -285,7 +290,7 @@
             <section id="termini" class="page-section legal-doc">
                 <a href="#home" class="back-link" onclick="return showSection('home')">← Torna alla Home</a>
                 <h2>Termini di servizio – IVU Plus</h2>
-                <p class="update-date">Ultimo aggiornamento: 21 marzo 2026</p>
+                <p class="update-date">Ultimo aggiornamento: 7 agosto 2026</p>
 
                 <h3>1. Parti e accettazione</h3>
                 <p>I presenti Termini di servizio (“Termini”) regolano l’uso dell’applicazione software IVU Plus (“App”),
@@ -300,11 +305,13 @@
                 <h3>2. Descrizione del servizio</h3>
                 <p>IVU Plus è un’applicazione per dispositivi mobili che consente, tra l’altro, di accedere tramite
                     browser integrato (WebView) al portale WebCrew Trenitalia e di utilizzare funzioni di supporto
-                    all’organizzazione dei turni, inclusa — ove attivata dall’Utente — la sincronizzazione con Google
-                    Calendar tramite i servizi Google.</p>
+                    all’organizzazione dei turni, inclusa — ove attivata dall’Utente — la copia dei turni sul calendario
+                    di sistema del dispositivo.</p>
+                <p>L’App può offrire funzioni aggiuntive tramite abbonamento IVU Plus Pro, gestito da Apple App Store o
+                    Google Play (e RevenueCat per lo stato dell’abbonamento).</p>
                 <p>L’App è fornita come strumento di comodità. Le funzionalità dipendono dalla disponibilità tecnica del
-                    dispositivo, dalla connettività di rete, dal corretto funzionamento dei sistemi del portale e — per
-                    le integrazioni — dai servizi Google.</p>
+                    dispositivo, dalla connettività di rete, dal corretto funzionamento dei sistemi del portale e —
+                    ove applicabile — dalle API del calendario di sistema e dagli store.</p>
 
                 <h3>3. Natura indipendente e assenza di affiliazione</h3>
                 <p>L’App non è sviluppata, sponsorizzata né approvata da Trenitalia S.p.A., da Ferrovie dello Stato
@@ -329,9 +336,11 @@
                     pertinenza di tali rapporti.</p>
 
                 <h3>5. Account, servizi di terzi e contenuti</h3>
-                <p>L’accesso al portale WebCrew Trenitalia e l’uso dei servizi Google (ad esempio accesso all’account
-                    Google e Google Calendar) sono soggetti alle condizioni e alle informative dei rispettivi
-                    fornitori.</p>
+                <p>L’accesso al portale WebCrew Trenitalia, l’uso delle API del calendario di sistema e — se attivati —
+                    di servizi di terze parti (ad esempio Sentry per la segnalazione errori opt-in, Apple/Google/RevenueCat
+                    per gli abbonamenti) sono soggetti alle condizioni e alle informative dei rispettivi fornitori.</p>
+                <p>Se il calendario del dispositivo è sincronizzato dal sistema operativo verso servizi cloud (ad esempio
+                    Google o iCloud), si applicano anche le condizioni di quei fornitori.</p>
                 <p>L’Utente è responsabile del mantenimento della riservatezza delle proprie credenziali e della gestione
                     delle autorizzazioni concesse all’App e ai servizi collegati.</p>
 
@@ -342,38 +351,44 @@
                 <p>È vietato copiare, modificare, distribuire, vendere, noleggiare, decodificare o tentare di estrarre il
                     codice sorgente dell’App, salvo ove espressamente consentito dalla legge imperativa.</p>
 
-                <h3>7. Aggiornamenti e modifiche</h3>
+                <h3>7. Abbonamenti (IVU Plus Pro)</h3>
+                <p>IVU Plus Pro è un abbonamento gestito da Apple App Store o Google Play. Può includere un periodo di
+                    prova gratuito; al termine, se non disdici, scatta il rinnovo al prezzo del piano. Acquisti, rinnovi
+                    e disdette avvengono dall’account dello store. Il Fornitore non gestisce direttamente i pagamenti.</p>
+
+                <h3>8. Aggiornamenti e modifiche</h3>
                 <p>Il Fornitore può distribuire aggiornamenti dell’App (correzioni, miglioramenti, modifiche alle
                     funzionalità). L’uso continuato dell’App dopo la pubblicazione di aggiornamenti può costituire
                     accettazione delle relative modifiche funzionali, ove previsto dalle regole dello store.</p>
                 <p>Il Fornitore può modificare i presenti Termini. La versione aggiornata sarà resa disponibile tramite i
-                    canali indicati dal Fornitore (ad esempio pagina web dedicata). Per modifiche sostanziali, ove
-                    richiesto dalla legge, potranno essere adottate ulteriori modalità di informazione.</p>
+                    canali indicati dal Fornitore (ad esempio pagina web dedicata e/o nell’App). Per modifiche
+                    sostanziali, ove richiesto dalla legge, potranno essere adottate ulteriori modalità di informazione.</p>
 
-                <h3>8. Limitazione di responsabilità</h3>
+                <h3>9. Limitazione di responsabilità</h3>
                 <p>Nei limiti massimi consentiti dalla legge applicabile, l’App è fornita “così com’è” e “secondo
                     disponibilità”, senza garanzie implicite di idoneità per uno scopo particolare, continuità del
                     servizio o assenza di errori.</p>
                 <p>Il Fornitore non risponde per danni derivanti da: indisponibilità o malfunzionamento del portale
                     WebCrew Trenitalia o di reti di terzi; errori, ritardi o incongruenze nei dati visualizzati o
-                    sincronizzati; uso improprio dell’App; interruzioni del servizio Google o del gestore del portale;
-                    perdita di dati non imputabile a dolo o colpa grave del Fornitore, ove compatibile con la legge.</p>
+                    sincronizzati; uso improprio dell’App; interruzioni del calendario di sistema, degli store o del
+                    gestore del portale; perdita di dati non imputabile a dolo o colpa grave del Fornitore, ove
+                    compatibile con la legge.</p>
                 <p>Restano salvi i diritti inderogabili spettanti all’Utente che rivesta la qualifica di consumatore ai
                     sensi del Codice del consumo (D.lgs. 206/2005), ove applicabile.</p>
 
-                <h3>9. Sospensione e cessazione</h3>
+                <h3>10. Sospensione e cessazione</h3>
                 <p>L’Utente può cessare l’uso dell’App in qualsiasi momento (ad esempio disinstallando l’App e cancellando
                     i dati locali).</p>
                 <p>Il Fornitore può interrompere o limitare la distribuzione dell’App o funzioni della stessa per motivi
                     tecnici, legali o organizzativi, con le modalità consentite dalle piattaforme di distribuzione e
                     dalla legge.</p>
 
-                <h3>10. Privacy</h3>
+                <h3>11. Privacy</h3>
                 <p>Il trattamento dei dati personali è descritto nell’Informativa sulla privacy resa disponibile dal
                     Fornitore. L’uso dell’App implica anche la presa visione di tale informativa ove richiesto dalla
                     legge o dalle policy degli store.</p>
 
-                <h3>11. Legge applicabile e foro</h3>
+                <h3>12. Legge applicabile e foro</h3>
                 <p>I presenti Termini sono regolati dalla legge italiana.</p>
                 <p>Per le controversie con Utenti che abbiano qualifica di consumatore, restano applicabili le
                     disposizioni imperative sul foro competente previste dal Codice del consumo e dal diritto
@@ -381,8 +396,9 @@
                 <p>Per le controversie con Utenti che non abbiano qualifica di consumatore, è competente in via esclusiva
                     il Foro di Trani, salvo diversa disposizione imperativa.</p>
 
-                <h3>12. Contatti</h3>
-                <p>Per domande sui presenti Termini: <a href="mailto:leogranata@gmail.com">leogranata@gmail.com</a></p>
+                <h3>13. Contatti</h3>
+                <p>Per domande sui presenti Termini: <a
+                        href="mailto:leogranata@gmail.com">leogranata@gmail.com</a></p>
             </section>
         </main>
 
