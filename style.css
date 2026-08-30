@@ -750,14 +750,31 @@ h2 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.step-card {
+.step-item {
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: var(--radius-md);
     padding: 28px 24px 24px;
     box-shadow: var(--shadow-sm);
+}
+
+.step-item h3 {
+    margin: 0 0 10px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--ink);
+}
+
+.step-item p {
+    margin: 0;
+    font-size: 0.9375rem;
+    line-height: 1.65;
+    color: var(--ink-subtle);
 }
 
 .step-number {
