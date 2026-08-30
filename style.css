@@ -791,20 +791,6 @@ h2 {
     font-weight: 700;
 }
 
-.step-card h3 {
-    margin: 0 0 10px;
-    font-size: 1.05rem;
-    font-weight: 600;
-    color: var(--ink);
-}
-
-.step-card p {
-    margin: 0;
-    font-size: 0.9375rem;
-    line-height: 1.65;
-    color: var(--ink-subtle);
-}
-
 /* --- FAQ --- */
 .faq-list {
     max-width: 46rem;
