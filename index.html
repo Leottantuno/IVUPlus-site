@@ -4,131 +4,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IVU Plus - I tuoi turni, organizzati</title>
+    <meta name="description"
+        content="IVU Plus — app per consultare e organizzare i turni WebCrew Trenitalia su smartphone e tablet, con sync opzionale sul calendario del dispositivo.">
+    <title>IVU Plus — I tuoi turni, organizzati</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div class="container">
-        <div class="banner-container">
-            <img src="IVUPlus-Banner.png" alt="IVU Plus Banner" class="app-banner">
+    <header class="site-header">
+        <div class="site-header-inner">
+            <a href="#home" class="brand" onclick="return showSection('home')">
+                <img src="IVUPlus-Logo.png" alt="" class="brand-logo" width="36" height="36">
+                <span>IVU Plus</span>
+            </a>
+            <nav class="site-nav" aria-label="Navigazione principale">
+                <a href="#home" data-section="home" onclick="return showSection('home')">Home</a>
+                <a href="#privacy" data-section="privacy" onclick="return showSection('privacy')">Privacy</a>
+                <a href="#account-deletion" data-section="account-deletion"
+                    onclick="return showSection('account-deletion')">Cancellazione dati</a>
+                <a href="#termini" data-section="termini" onclick="return showSection('termini')">Termini</a>
+            </nav>
         </div>
+    </header>
 
-        <header class="main-header">
-            <h1>IVU Plus — I tuoi turni, organizzati</h1>
-            <p>Un’unica interfaccia per prepararti al lavoro senza perdere tempo.</p>
-        </header>
-
-        <main>
-            <section id="home" class="page-section active">
-                <section class="intro">
-                    <p>App per smartphone e tablet pensata per chi utilizza il portale WebCrew Trenitalia: accedi al
-                        portale, consulta i turni in modo chiaro sul telefono e, se vuoi, sincronizzali con il calendario
-                        del dispositivo (anche Google Calendar).</p>
-                    <h3>Per chi è</h3>
-                    <p>Per dipendenti e operatori che gestiscono i turni tramite il portale aziendale e vogliono una
-                        vista comoda su mobile, promemoria e allineamento con l’agenda personale — sempre nel
-                        rispetto delle regole del proprio datore di lavoro e del portale ufficiale.</p>
-                </section>
-
-                <div class="features">
-                    <h2>Cosa puoi fare con IVU Plus</h2>
-                    <div class="feature-grid">
-                        <div class="feature-item">
-                            <strong>🚀 Portale a portata di mano</strong>
-                            <p>Browser integrato per accedere a WebCrew come sul PC, con sessione e navigazione adatte
-                                al telefono.</p>
-                        </div>
-                        <div class="feature-item">
-                            <strong>👥 Più account</strong>
-                            <p>Gestisci più profili con credenziali crittografate sul dispositivo; passa da un utente
-                                all’altro quando serve.</p>
-                        </div>
-                        <div class="feature-item">
-                            <strong>⚡ Login e sync più semplici</strong>
-                            <p>Auto-fill e ripristino sessione quando possibile; aggiornamento turni automatico in
-                                background se lo attivi.</p>
-                        </div>
-                        <div class="feature-item">
-                            <strong>📋 Turni come sul portale</strong>
-                            <p>Vista mese con ogni giornata, partenza e arrivo già in lista, turni notturni e assenze
-                                su più giorni; consultazione anche offline.</p>
-                        </div>
-                        <div class="feature-item">
-                            <strong>🛑 Riposi sotto controllo</strong>
-                            <p>Indicatori che aiutano a leggere i riposi tra i turni (giornaliero, settimanale,
-                                tecnico), con la stessa logica che usi già sul portale.</p>
-                        </div>
-                        <div class="feature-item">
-                            <strong>🔍 Dettaglio e storico</strong>
-                            <p>Schede turno con orari, servizi e note; storico della giornata con differenze tra
-                                versioni quando il turno cambia.</p>
-                        </div>
-                        <div class="feature-item">
-                            <strong>✅ Conferma Gestione operativa</strong>
-                            <p>Conferma i turni da confermare direttamente dall’app, con lista e dashboard aggiornate
-                                subito.</p>
-                        </div>
-                        <div class="feature-item">
-                            <strong>📅 Calendario del telefono</strong>
-                            <p>Sincronizza turni, riposi e assenze con il calendario del dispositivo; tu decidi se e
-                                quando attivarlo.</p>
-                        </div>
-                        <div class="feature-item">
-                            <strong>📊 Dashboard e widget</strong>
-                            <p>Panoramica su prossimo turno, indicatori e statistiche; widget sulla home per avere il
-                                turno a colpo d’occhio.</p>
-                        </div>
-                        <div class="feature-item">
-                            <strong>🎨 Tema e lingua</strong>
-                            <p>Chiaro, scuro o sistema; interfaccia in italiano o inglese (o seguendo la lingua del
-                                telefono).</p>
-                        </div>
-                        <div class="feature-item">
-                            <strong>📝 Note e backup</strong>
-                            <p>Annota i turni con salvataggio automatico; esporta note, turni e impostazioni in un file
-                                locale (senza password).</p>
-                        </div>
-                        <div class="feature-item">
-                            <strong>🛡️ Privacy sotto controllo</strong>
-                            <p>Password protette sul dispositivo; segnalazione errori solo se la attivi tu (opt-in),
-                                come descritto nell’<a href="#privacy"
-                                    onclick="return showSection('privacy')">informativa privacy</a>.</p>
+    <main class="site-main">
+        <section id="home" class="page-section active">
+            <div class="hero">
+                <div class="hero-inner">
+                    <div class="hero-copy">
+                        <p class="hero-eyebrow">App per turni WebCrew</p>
+                        <h1>I tuoi turni, organizzati</h1>
+                        <p class="hero-lead">Un’unica interfaccia per accedere al portale, consultare i turni sul telefono
+                            e, se vuoi, allinearli con il calendario del dispositivo.</p>
+                        <div class="hero-actions">
+                            <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.leogranata.ivuplus"
+                                target="_blank" rel="noopener noreferrer">Google Play</a>
+                            <a class="btn btn-secondary" href="https://apps.apple.com/app/id6758614108"
+                                target="_blank" rel="noopener noreferrer">App Store</a>
                         </div>
                     </div>
+                    <div class="hero-visual">
+                        <img src="IVUPlus-Banner.png" alt="Anteprima IVU Plus" class="hero-banner" width="380"
+                            height="380">
+                    </div>
                 </div>
+            </div>
 
-                <section class="why-section">
-                    <h2>Perché sceglierla</h2>
-                    <p>IVU Plus non sostituisce il portale WebCrew: lo affianca con un’esperienza mobile pensata per chi
-                        è in movimento. Meno passaggi tra sito e calendario, più chiarezza su turni, riposi e variazioni,
-                        tutto sotto il tuo controllo.</p>
+            <div class="content-wrap">
+                <section class="section-block intro-block">
+                    <div class="section-heading centered">
+                        <p class="section-eyebrow">Panoramica</p>
+                        <h2>Pensata per chi lavora con WebCrew</h2>
+                        <p class="section-lead">App per smartphone e tablet: accedi al portale, consulta i turni in modo
+                            chiaro e sincronizzali con il calendario del dispositivo quando lo desideri.</p>
+                    </div>
+                    <h3>Per chi è</h3>
+                    <p>Per dipendenti e operatori che gestiscono i turni tramite il portale aziendale e vogliono una vista
+                        comoda su mobile, promemoria e allineamento con l’agenda personale — sempre nel rispetto delle
+                        regole del proprio datore di lavoro e del portale ufficiale.</p>
                 </section>
 
-                <section class="availability-section">
-                    <h2>Disponibilità</h2>
-                    <p>Scarica l’app dagli store ufficiali (Google Play / App Store) e tienila aggiornata per le ultime
-                        funzioni e correzioni.</p>
+                <section class="section-block features">
+                    <div class="section-heading">
+                        <p class="section-eyebrow">Funzionalità</p>
+                        <h2>Cosa puoi fare con IVU Plus</h2>
+                    </div>
+                    <div class="feature-grid">
+                        <article class="feature-item">
+                            <h3 class="feature-title">Portale a portata di mano</h3>
+                            <p>Browser integrato per accedere a WebCrew come sul PC, con sessione e navigazione adatte al
+                                telefono.</p>
+                        </article>
+                        <article class="feature-item">
+                            <h3 class="feature-title">Più account</h3>
+                            <p>Gestisci più profili con credenziali crittografate sul dispositivo; passa da un utente
+                                all’altro quando serve.</p>
+                        </article>
+                        <article class="feature-item">
+                            <h3 class="feature-title">Login e sync più semplici</h3>
+                            <p>Auto-fill e ripristino sessione quando possibile; aggiornamento turni automatico in
+                                background se lo attivi.</p>
+                        </article>
+                        <article class="feature-item">
+                            <h3 class="feature-title">Turni come sul portale</h3>
+                            <p>Vista mese con ogni giornata, partenza e arrivo già in lista, turni notturni e assenze su
+                                più giorni; consultazione anche offline.</p>
+                        </article>
+                        <article class="feature-item">
+                            <h3 class="feature-title">Riposi sotto controllo</h3>
+                            <p>Indicatori che aiutano a leggere i riposi tra i turni (giornaliero, settimanale, tecnico),
+                                con la stessa logica che usi già sul portale.</p>
+                        </article>
+                        <article class="feature-item">
+                            <h3 class="feature-title">Dettaglio e storico</h3>
+                            <p>Schede turno con orari, servizi e note; storico della giornata con differenze tra versioni
+                                quando il turno cambia.</p>
+                        </article>
+                        <article class="feature-item">
+                            <h3 class="feature-title">Conferma Gestione operativa</h3>
+                            <p>Conferma i turni da confermare direttamente dall’app, con lista e dashboard aggiornate
+                                subito.</p>
+                        </article>
+                        <article class="feature-item">
+                            <h3 class="feature-title">Calendario del telefono</h3>
+                            <p>Sincronizza turni, riposi e assenze con il calendario del dispositivo; tu decidi se e
+                                quando attivarlo.</p>
+                        </article>
+                        <article class="feature-item">
+                            <h3 class="feature-title">Dashboard e widget</h3>
+                            <p>Panoramica su prossimo turno, indicatori e statistiche; widget sulla home per avere il
+                                turno a colpo d’occhio.</p>
+                        </article>
+                        <article class="feature-item">
+                            <h3 class="feature-title">Tema e lingua</h3>
+                            <p>Chiaro, scuro o sistema; interfaccia in italiano o inglese (o seguendo la lingua del
+                                telefono).</p>
+                        </article>
+                        <article class="feature-item">
+                            <h3 class="feature-title">Note e backup</h3>
+                            <p>Annota i turni con salvataggio automatico; esporta note, turni e impostazioni in un file
+                                locale (senza password).</p>
+                        </article>
+                        <article class="feature-item">
+                            <h3 class="feature-title">Privacy sotto controllo</h3>
+                            <p>Password protette sul dispositivo; segnalazione errori solo se la attivi tu (opt-in), come
+                                descritto nell’<a href="#privacy"
+                                    onclick="return showSection('privacy')">informativa privacy</a>.</p>
+                        </article>
+                    </div>
                 </section>
 
-                <section class="disclaimer-box">
-                    <p><strong>Nota importante</strong> — IVU Plus è uno strumento indipendente e non è sviluppato né
-                        approvato da Trenitalia o Ferrovie dello Stato. L’uso del portale resta soggetto alle policy e ai
-                        termini del gestore del portale e del tuo rapporto di lavoro. Per condizioni d’uso dell’app e
-                        informativa sulla privacy, consulta le pagine <a href="#termini"
-                            onclick="return showSection('termini')">Termini</a> e <a href="#privacy"
-                            onclick="return showSection('privacy')">Privacy</a> su questo sito.</p>
+                <section class="section-block">
+                    <div class="highlight-panel">
+                        <div class="section-heading centered">
+                            <p class="section-eyebrow">Valore</p>
+                            <h2>Perché sceglierla</h2>
+                        </div>
+                        <p>IVU Plus non sostituisce il portale WebCrew: lo affianca con un’esperienza mobile pensata per
+                            chi è in movimento. Meno passaggi tra sito e calendario, più chiarezza su turni, riposi e
+                            variazioni, tutto sotto il tuo controllo.</p>
+                    </div>
                 </section>
 
-                <section class="contact-section">
-                    <h2>Contatto e supporto</h2>
-                    <p>Per domande, suggerimenti o assistenza: <strong>leogranata@gmail.com</strong></p>
+                <section class="section-block">
+                    <div class="section-heading centered">
+                        <p class="section-eyebrow">Download</p>
+                        <h2>Disponibilità</h2>
+                        <p class="section-lead">Scarica l’app dagli store ufficiali e tienila aggiornata per le ultime
+                            funzioni e correzioni.</p>
+                    </div>
+                    <div class="actions-row">
+                        <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.leogranata.ivuplus"
+                            target="_blank" rel="noopener noreferrer">Google Play</a>
+                        <a class="btn btn-outline" href="https://apps.apple.com/app/id6758614108" target="_blank"
+                            rel="noopener noreferrer">App Store</a>
+                    </div>
                 </section>
-            </section>
 
-            <section id="privacy" class="page-section legal-doc">
-                <a href="#home" class="back-link" onclick="return showSection('home')">← Torna alla Home</a>
+                <section class="section-block">
+                    <div class="notice-box">
+                        <p><strong>Nota importante</strong> — IVU Plus è uno strumento indipendente e non è sviluppato né
+                            approvato da Trenitalia o Ferrovie dello Stato. L’uso del portale resta soggetto alle policy e
+                            ai termini del gestore del portale e del tuo rapporto di lavoro. Per condizioni d’uso e
+                            privacy consulta <a href="#termini" onclick="return showSection('termini')">Termini</a> e <a
+                                href="#privacy" onclick="return showSection('privacy')">Privacy</a>.</p>
+                    </div>
+                </section>
+
+                <section class="section-block contact-section">
+                    <div class="section-heading centered">
+                        <p class="section-eyebrow">Assistenza</p>
+                        <h2>Contatto e supporto</h2>
+                    </div>
+                    <p>Per domande, suggerimenti o assistenza:<br>
+                        <a href="mailto:leogranata@gmail.com" class="contact-email">leogranata@gmail.com</a></p>
+                </section>
+            </div>
+        </section>
+
+        <section id="privacy" class="page-section legal-doc">
+            <div class="legal-page">
+                <div class="legal-page-inner">
+                <a href="#home" class="back-link" onclick="return showSection('home')">← Torna alla home</a>
                 <h2>Informativa sulla privacy – IVU Plus</h2>
                 <p class="update-date">Ultimo aggiornamento: 7 agosto 2026</p>
 
@@ -240,10 +301,14 @@
                 <h3>12. Contatti</h3>
                 <p>Privacy, diritti degli interessati e supporto: <a
                         href="mailto:leogranata@gmail.com">leogranata@gmail.com</a></p>
+                </div>
+            </div>
             </section>
 
             <section id="account-deletion" class="page-section legal-doc">
-                <a href="#home" class="back-link" onclick="return showSection('home')">← Torna alla Home</a>
+                <div class="legal-page">
+                    <div class="legal-page-inner">
+                <a href="#home" class="back-link" onclick="return showSection('home')">← Torna alla home</a>
                 <h2>Cancellazione account e dati – IVU Plus</h2>
                 <p class="update-date">Ultimo aggiornamento: 25 luglio 2026</p>
 
@@ -285,10 +350,14 @@
                 <p>Per richieste di cancellazione o chiarimenti sui dati trattati tramite IVU Plus:
                     <a href="mailto:leogranata@gmail.com">leogranata@gmail.com</a>.</p>
                 <p>Informativa completa: <a href="#privacy" onclick="return showSection('privacy')">Privacy</a>.</p>
+                </div>
+            </div>
             </section>
 
             <section id="termini" class="page-section legal-doc">
-                <a href="#home" class="back-link" onclick="return showSection('home')">← Torna alla Home</a>
+                <div class="legal-page">
+                    <div class="legal-page-inner">
+                <a href="#home" class="back-link" onclick="return showSection('home')">← Torna alla home</a>
                 <h2>Termini di servizio – IVU Plus</h2>
                 <p class="update-date">Ultimo aggiornamento: 7 agosto 2026</p>
 
@@ -399,28 +468,54 @@
                 <h3>13. Contatti</h3>
                 <p>Per domande sui presenti Termini: <a
                         href="mailto:leogranata@gmail.com">leogranata@gmail.com</a></p>
-            </section>
-        </main>
-
-        <footer>
-            <div class="footer-logo-container">
-                <img src="IVUPlus-Logo.png" alt="IVU Plus Logo" class="footer-logo">
+                </div>
             </div>
-            <nav>
-                <a href="#home" onclick="return showSection('home')">Home</a> |
-                <a href="#privacy" onclick="return showSection('privacy')">Privacy</a> |
-                <a href="#account-deletion" onclick="return showSection('account-deletion')">Cancellazione dati</a> |
-                <a href="#termini" onclick="return showSection('termini')">Termini</a>
-            </nav>
-            <p class="footer-copy">&copy; 2026 Leo Granata</p>
-        </footer>
-    </div>
+            </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer-inner">
+            <div class="footer-brand">
+                <img src="IVUPlus-Logo.png" alt="IVU Plus" class="footer-logo" width="48" height="48">
+                <div class="footer-brand-text">
+                    <strong>IVU Plus</strong>
+                    <p>Strumento indipendente per organizzare i turni WebCrew su mobile. Non affiliato a Trenitalia o
+                        Ferrovie dello Stato.</p>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div>
+                    <h4>App</h4>
+                    <ul>
+                        <li><a href="#home" onclick="return showSection('home')">Home</a></li>
+                        <li><a href="https://play.google.com/store/apps/details?id=com.leogranata.ivuplus"
+                                target="_blank" rel="noopener noreferrer">Google Play</a></li>
+                        <li><a href="https://apps.apple.com/app/id6758614108" target="_blank"
+                                rel="noopener noreferrer">App Store</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Legale</h4>
+                    <ul>
+                        <li><a href="#privacy" onclick="return showSection('privacy')">Privacy</a></li>
+                        <li><a href="#account-deletion" onclick="return showSection('account-deletion')">Cancellazione
+                                dati</a></li>
+                        <li><a href="#termini" onclick="return showSection('termini')">Termini di servizio</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <p class="footer-bottom">&copy; 2026 Leo Granata</p>
+    </footer>
 
     <script>
         function showSection(sectionId) {
             document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active'));
             const el = document.getElementById(sectionId);
             if (el) el.classList.add('active');
+            document.querySelectorAll('.site-nav a[data-section]').forEach(a => {
+                a.classList.toggle('active', a.dataset.section === sectionId);
+            });
             if (history.replaceState) {
                 history.replaceState(null, '', '#' + sectionId);
             } else {
@@ -432,8 +527,7 @@
 
         (function initFromHash() {
             const raw = window.location.hash;
-            if (!raw || raw === '#') return;
-            const id = raw.slice(1);
+            const id = (!raw || raw === '#') ? 'home' : raw.slice(1);
             if (id === 'privacy' || id === 'termini' || id === 'home' || id === 'account-deletion') {
                 showSection(id);
             }
