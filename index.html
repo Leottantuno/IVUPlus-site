@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=20260831">
 </head>
 
 <body>
@@ -21,7 +21,13 @@
                 <img src="IVUPlus-Logo.png" alt="" class="brand-logo" width="36" height="36">
                 <span>IVU Plus</span>
             </a>
-            <nav class="site-nav" aria-label="Navigazione principale">
+            <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav"
+                aria-label="Apri menu di navigazione">
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+            </button>
+            <nav id="site-nav" class="site-nav" aria-label="Navigazione principale">
                 <a href="#home" data-section="home" onclick="return showSection('home')">Home</a>
                 <a href="#privacy" data-section="privacy" onclick="return showSection('privacy')">Privacy</a>
                 <a href="#account-deletion" data-section="account-deletion"
@@ -48,8 +54,8 @@
                         </div>
                     </div>
                     <div class="hero-visual">
-                        <img src="IVUPlus-Banner.png" alt="Anteprima IVU Plus" class="hero-banner" width="380"
-                            height="380">
+                        <img src="IVUPlus-Banner.png" alt="Anteprima IVU Plus" class="hero-banner" width="1280"
+                            height="619" decoding="async">
                     </div>
                 </div>
             </div>
@@ -509,6 +515,21 @@
     </footer>
 
     <script>
+        function closeNav() {
+            const nav = document.getElementById('site-nav');
+            const toggle = document.querySelector('.nav-toggle');
+            if (nav) nav.classList.remove('open');
+            if (toggle) toggle.setAttribute('aria-expanded', 'false');
+        }
+
+        function toggleNav() {
+            const nav = document.getElementById('site-nav');
+            const toggle = document.querySelector('.nav-toggle');
+            if (!nav || !toggle) return;
+            const open = nav.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        }
+
         function showSection(sectionId) {
             document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active'));
             const el = document.getElementById(sectionId);
@@ -516,6 +537,7 @@
             document.querySelectorAll('.site-nav a[data-section]').forEach(a => {
                 a.classList.toggle('active', a.dataset.section === sectionId);
             });
+            closeNav();
             if (history.replaceState) {
                 history.replaceState(null, '', '#' + sectionId);
             } else {
@@ -524,6 +546,16 @@
             window.scrollTo(0, 0);
             return false;
         }
+
+        document.querySelector('.nav-toggle')?.addEventListener('click', toggleNav);
+
+        document.addEventListener('click', (event) => {
+            const nav = document.getElementById('site-nav');
+            const toggle = document.querySelector('.nav-toggle');
+            if (!nav?.classList.contains('open')) return;
+            if (nav.contains(event.target) || toggle?.contains(event.target)) return;
+            closeNav();
+        });
 
         (function initFromHash() {
             const raw = window.location.hash;

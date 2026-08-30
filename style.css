@@ -36,6 +36,7 @@
 
 html {
     scroll-behavior: smooth;
+    color-scheme: light;
 }
 
 body {
@@ -69,22 +70,29 @@ a:hover {
     position: sticky;
     top: 0;
     z-index: 100;
-    height: var(--header-height);
-    background: rgba(255, 255, 255, 0.92);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    min-height: var(--header-height);
+    background: #ffffff;
     border-bottom: 1px solid var(--border);
+}
+
+@supports ((backdrop-filter: blur(12px)) or (-webkit-backdrop-filter: blur(12px))) {
+    .site-header {
+        background: rgba(255, 255, 255, 0.94);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+    }
 }
 
 .site-header-inner {
     max-width: var(--max-width);
     margin: 0 auto;
     padding: 0 24px;
-    height: 100%;
+    min-height: var(--header-height);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 24px;
+    gap: 16px;
+    position: relative;
 }
 
 .brand {
@@ -132,6 +140,46 @@ a:hover {
 .site-nav a.active {
     color: var(--brand);
     background: var(--brand-soft);
+}
+
+.nav-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: var(--surface);
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.nav-toggle-bar {
+    display: block;
+    width: 18px;
+    height: 2px;
+    background: var(--ink);
+    border-radius: 1px;
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+.nav-toggle-bar {
+    transition: transform 0.15s ease, opacity 0.15s ease;
 }
 
 /* --- Layout --- */
@@ -281,7 +329,10 @@ a:hover {
 }
 
 .hero-banner {
-    width: min(100%, 380px);
+    width: min(100%, 420px);
+    height: auto;
+    aspect-ratio: 1280 / 619;
+    object-fit: contain;
     border-radius: var(--radius-lg);
     box-shadow: 0 24px 48px rgba(0, 0, 0, 0.35);
     border: 1px solid rgba(255, 255, 255, 0.08);
@@ -610,7 +661,62 @@ h2 {
 }
 
 /* --- Responsive --- */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: inline-flex;
+    }
+
+    .site-nav {
+        display: none;
+        position: absolute;
+        top: calc(100% + 1px);
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 8px;
+        background: #ffffff;
+        border: 1px solid var(--border);
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-md);
+    }
+
+    .site-nav.open {
+        display: flex;
+    }
+
+    .site-nav a {
+        width: 100%;
+        text-align: left;
+        padding: 12px 14px;
+    }
+
+    .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        text-align: center;
+    }
+
+    .hero-copy {
+        max-width: none;
+        margin: 0 auto;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .site-footer-inner {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 900px) and (min-width: 769px) {
     .hero-inner {
         grid-template-columns: 1fr;
         gap: 36px;
@@ -640,13 +746,12 @@ h2 {
         padding: 0 16px;
     }
 
-    .site-nav a {
-        padding: 6px 8px;
-        font-size: 0.8125rem;
+    .hero {
+        padding: 56px 16px 48px;
     }
 
-    .hero {
-        padding: 48px 16px 56px;
+    .hero-eyebrow {
+        margin-top: 4px;
     }
 
     .content-wrap {
@@ -654,11 +759,7 @@ h2 {
     }
 
     .section-block {
-        padding-top: 56px;
-    }
-
-    .feature-grid {
-        grid-template-columns: 1fr;
+        padding-top: 48px;
     }
 
     .footer-links {
