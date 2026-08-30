@@ -851,6 +851,74 @@ h2 {
     text-align: center;
 }
 
+/* --- Animazioni sobrie (reveal.js) --- */
+.hero-copy,
+.hero-visual {
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.hero-loaded .hero-copy {
+    opacity: 1;
+    transform: none;
+    transition-delay: 0.05s;
+}
+
+.hero-loaded .hero-visual {
+    opacity: 1;
+    transform: none;
+    transition-delay: 0.14s;
+}
+
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(18px);
+    transition:
+        opacity 0.5s ease var(--reveal-delay, 0ms),
+        transform 0.5s ease var(--reveal-delay, 0ms);
+}
+
+.reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+.site-header {
+    transition: box-shadow 0.25s ease;
+}
+
+.site-header.is-scrolled {
+    box-shadow: var(--shadow-sm);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .hero-copy,
+    .hero-visual,
+    .reveal-on-scroll {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .site-header {
+        transition: none;
+    }
+}
+
+@media (scripting: none) {
+    .hero-copy,
+    .hero-visual,
+    .reveal-on-scroll {
+        opacity: 1;
+        transform: none;
+    }
+}
+
 /* --- Responsive --- */
 @media (max-width: 768px) {
     .nav-toggle {
