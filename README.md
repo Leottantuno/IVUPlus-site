@@ -1,15 +1,18 @@
 # Sito web IVU Plus (`docs/site`)
 
-Sorgente statica del sito pubblicato su **GitHub Pages** → [ivuplus.leogranata.it](https://ivuplus.leogranata.it).
+> **Stato: sospeso (set 2026)** — online solo documentazione legale per gli store.
+> Endpoint attivi: `#privacy`, `#termini`, `#account-deletion`, `version.json`.
+> Sito marketing archiviato in `marketing/`; riattivazione: `YES=1 make resume-site`.
+
+Sorgente statica del sito (pubblicazione su **GitHub Pages** → `ivuplus.leogranata.it`).
 
 | Percorso | Contenuto |
 |----------|-----------|
-| `index.html` | Home IT + pagine legali (routing hash) |
-| `en/index.html` | Home EN leggera |
+| `index.html` | **Legale** (deploy attivo): privacy, termini, cancellazione dati |
+| `marketing/index.html` | Home marketing completa (offline fino a `make resume-site`) |
+| `marketing/en/` | Versione inglese marketing |
 | `style.css` | Stili condivisi |
-| `reveal.js` | Fade-in al scroll (rispetta `prefers-reduced-motion`) |
-| `assets/` | Badge store, sorgenti immagini |
-| `.nojekyll` | Disabilita Jekyll su GitHub Pages |
+| `assets/banner-source.jpg` | Sorgente banner (solo build locale) |
 
 **Repo di deploy**: [Leottantuno/IVUPlus-site](https://github.com/Leottantuno/IVUPlus-site) (branch `main`).
 
@@ -20,11 +23,13 @@ Sorgente statica del sito pubblicato su **GitHub Pages** → [ivuplus.leogranata
 make optimize-site-images
 
 # Sincronizza docs/site → IVUPlus-site (preserva CNAME e version.json)
-YES=1 PUSH=1 make deploy-site MESSAGE='feat(site): ...'
+YES=1 PUSH=1 make deploy-site MESSAGE='feat(site): ...'   # default SITE_MODE=legal
 
-# Aggiorna version.json nel repo Pages da pubspec.yaml
-make sync-version-manifest
-# opzionale: MIN_REQUIRED=1.14.0 IVUPLUS_SITE_REPO=~/path/to/IVUPlus-site
+# Solo endpoint legali (default dopo sospensione marketing)
+YES=1 PUSH=1 make suspend-site
+
+# Ripristina sito marketing completo
+YES=1 PUSH=1 make resume-site
 ```
 
 Script diretti: `scripts/site/optimize-images.sh`, `scripts/site/deploy-site.sh`.
